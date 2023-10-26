@@ -1,0 +1,157 @@
+.benefits {
+	padding: 50px 0 100px;
+	position: relative;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+	}
+
+	&__left {
+		display: grid;
+		grid-template-columns: repeat(2, 370px);
+		gap: 35px 95px;
+		grid-column: 1 / 3;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+
+		&-icon {
+			min-width: 102px;
+			min-height: 102px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid rgba(#000000, 0.1);
+		}
+
+		&-right {
+			margin-left: 20px;
+		}
+
+		&-num {
+			font-size: 36px;
+			font-weight: 500;
+			line-height: 1.8;
+			color: var(--primary);
+		}
+
+		&-text {
+			font-size: 14px;
+			line-height: 1.5;
+			color: #3c3c3d;
+		}
+	}
+
+	&__right {
+		&-title {
+			font-family: 'PT-serif';
+			font-weight: 400;
+			font-size: 36px;
+			line-height: 1.8;
+			color: var(--text);
+		}
+
+		&-text {
+			font-size: 16px;
+			line-height: 1.5;
+			color: #3c3c3d;
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.benefits {
+		&__wrapper {
+			display: flex;
+			column-gap: 20px;
+		}
+		&__left {
+			grid-template-columns: repeat(2, 300px);
+			gap: 35px;
+		}
+
+		&__right-title {
+			@media (max-width: 1200px) {
+				max-width: 270px;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.benefits {
+		&__wrapper {
+			flex-direction: column-reverse;
+			row-gap: 40px;
+		}
+
+		&__left {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&__right {
+			display: flex;
+			align-items: center;
+
+			img {
+				margin-left: 88px;
+
+				@media (max-width: 690px) {
+					margin-left: auto;
+				}
+			}
+
+			&-text {
+				margin-top: auto;
+				margin-bottom: 20px;
+				margin-left: 22px;
+			}
+		}
+	}
+}
+
+@media (max-width: 660px) {
+	.benefits {
+		@media (max-width: 576px) {
+			padding: 42px 0 100px;
+		}
+
+		&__left {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+
+		&__right {
+			flex-wrap: wrap;
+			&-title {
+				flex: 1 1 100%;
+				max-width: 100%;
+
+				@media (max-width: 576px) {
+					font-size: 32px;
+				}
+			}
+
+			img {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.benefits {
+		&__right {
+			&-title {
+				max-width: 270px;
+			}
+			&-text {
+				max-width: 95px;
+			}
+		}
+	}
+}

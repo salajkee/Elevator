@@ -1,0 +1,162 @@
+.feedback {
+	width: 100%;
+	margin-top: 100px;
+	padding: 60px 0 65px;
+	background-image: url('../images/feedback-bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	&__title {
+		font-family: 'FT-serif';
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 1.8;
+		color: var(--white);
+	}
+
+	&__subtitle {
+		margin-top: 20px;
+		font-size: 18px;
+		line-height: 1.5;
+		color: var(--white);
+	}
+
+	&__form {
+		margin-top: 40px;
+
+		&-input {
+			width: 434px;
+			height: 91px;
+			display: block;
+			padding: 32px 30px;
+			font-size: 18px;
+			line-height: 1.5;
+			color: var(--text);
+			outline: none;
+			background-color: var(--white);
+			border: none;
+
+			&::placeholder {
+				color: rgba(#212121, 0.3);
+			}
+
+			&:first-child {
+				margin-bottom: 20px;
+			}
+		}
+
+		&-btn {
+			margin-top: 40px;
+			width: 434px;
+			height: 96px;
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 1.5;
+			color: var(--white);
+			text-transform: uppercase;
+			cursor: pointer;
+			border: none;
+			background-color: var(--primary);
+			transition: all 0.2s linear;
+
+			@media (hover: hover) {
+				&:hover {
+					background-color: #00467c;
+				}
+			}
+
+			@media (hover: none) {
+				&:active {
+					background-color: #00467c;
+				}
+			}
+		}
+	}
+
+	&__info {
+		margin-top: 10px;
+		font-size: 14px;
+		line-height: 1.5;
+		color: var(--white);
+
+		a {
+			color: var(--white);
+			text-decoration: underline;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.feedback {
+		padding: 40px 0 700px;
+		background-image: url('../images/feedback-bg-992.jpg');
+
+		&__wrapper {
+			max-width: 450px;
+			margin: 0 auto;
+		}
+
+		&__title {
+			text-align: center;
+		}
+
+		&__subtitle {
+			text-align: center;
+		}
+
+		&__form {
+			max-width: 434px;
+			margin: 40px auto 0;
+		}
+
+		&__info {
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.feedback {
+		background-position: 0 bottom;
+	}
+}
+
+@media (max-width: 576px) {
+	.feedback {
+		padding: 40px 0 380px;
+		background-image: url('../images/feedback-bg-576.jpg');
+
+		&__title {
+			font-size: 32px;
+		}
+
+		&__subtitle {
+			margin-top: 20px;
+			font-size: 14px;
+		}
+
+		&__form {
+			margin-top: 20px;
+
+			&-input {
+				max-width: 432px;
+				width: 100%;
+
+				&:first-child {
+					margin-bottom: 12px;
+				}
+			}
+
+			&-btn {
+				width: 100%;
+				max-width: 432px;
+				margin-top: 20px;
+			}
+		}
+
+		&__info {
+			font-size: 12px;
+		}
+	}
+}
